@@ -11,7 +11,7 @@ require github.com/swaggest/usecase v1.1.3
 
 require (
 	github.com/akrylysov/algnhsa v0.12.1
-	github.com/swaggest/rest v0.2.28
+	github.com/swaggest/rest v0.2.29
 	github.com/swaggest/swgui v1.4.5
 )
 
@@ -32,7 +32,7 @@ require (
 	github.com/swaggest/form/v5 v5.0.1 // indirect
 	github.com/swaggest/jsonschema-go v0.3.35 // indirect
 	github.com/swaggest/openapi-go v0.2.18 // indirect
-	github.com/swaggest/refl v1.0.2 // indirect
+	github.com/swaggest/refl v1.1.0 // indirect
 	go.uber.org/zap v1.21.0
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
