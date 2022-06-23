@@ -2,6 +2,7 @@ package endpoints
 
 import (
 	"context"
+	"golambda/internal/logger"
 
 	"github.com/swaggest/rest/web"
 	"github.com/swaggest/usecase"
@@ -21,6 +22,7 @@ func PostEcho(service *web.Service) {
 		var in = input.(*PostEchoInput)
 		var out = output.(*PostEchoOutput)
 
+		logger.Infof("Received echo request: %s", in.Request)
 		out.Result = in.Request
 
 		return nil

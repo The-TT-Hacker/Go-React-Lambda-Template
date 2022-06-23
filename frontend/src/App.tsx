@@ -1,28 +1,19 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { AppClient, ConfiguratorRequest, ConfiguratorResponse } from './client';
+import { AppClient } from './client';
 import Background from './background.jpg';
 import { Loading } from './components/Loading/Loading';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export interface PageProps {
   client: AppClient;
-  setPage: React.Dispatch<React.SetStateAction<PageState>>;
-  setRequest: React.Dispatch<React.SetStateAction<ConfiguratorRequest>>;
-  setResponse: React.Dispatch<
-    React.SetStateAction<ConfiguratorResponse | undefined>
-  >;
-  request: ConfiguratorRequest;
-  response?: ConfiguratorResponse;
-}
-
-interface PageState {
-  page: (props: PageProps) => JSX.Element;
 }
 
 export function App() {
   const [client, setClient] = useState<AppClient | undefined>();
+  const [request, setRequest] = useState<string>('');
+  const [response, setResponse] = useState<string>('');
 
   useEffect(() => {
     fetch('settings.json')
@@ -44,10 +35,34 @@ export function App() {
       }}
     >
       <ToastContainer />
+
       <div className="App">
+        <h1>Go Lambda Skeleton</h1>
         {client ? (
           <>
-            <h1>Hello World</h1>
+            <input
+              type="text"
+              onChange={(e) => {
+                e.preventDefault();
+                setRequest(e.target.value);
+              }}
+            />
+            <input
+              type="submit"
+              onClick={() => {
+                client.default
+                  .cmdEndpointsPostEcho({
+                    request,
+                  })
+                  .then((res) => {
+                    setResponse(res.result);
+                  })
+                  .catch((e) => {
+                    toast(e);
+                  });
+              }}
+            />
+            <h2>{response}</h2>
           </>
         ) : (
           <Loading />
