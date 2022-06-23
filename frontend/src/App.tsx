@@ -35,7 +35,9 @@ export function App() {
       }}
     >
       <ToastContainer />
+
       <div className="App">
+        <h1>Go Lambda Skeleton</h1>
         {client ? (
           <>
             <input
@@ -60,7 +62,7 @@ export function App() {
                   });
               }}
             />
-            <h1>{response}</h1>
+            <h2>{response}</h2>
           </>
         ) : (
           <Loading />

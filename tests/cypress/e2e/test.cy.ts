@@ -5,7 +5,7 @@ describe('end to end', () => {
       .type('val');
     cy.get('input[type="submit"]')
       .click();
-    cy.get('h1').should(
+    cy.get('h2').should(
       "have.text",
       "val"
     );
