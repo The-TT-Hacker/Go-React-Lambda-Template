@@ -1,6 +1,7 @@
-# Golang Lambda Skeleton
+# Golang Lambda React Template
 
-The Golang Lambda Skeleton is a web application which calculates the optimal equipment for a given player.
+The Golang Lambda React Template is a web application which deploys a golang API to AWS lambda
+and a React frontend to AWS CloudFront / S3.
 
 ## Install
 

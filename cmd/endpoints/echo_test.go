@@ -14,11 +14,11 @@ import (
 func TestPostEcho(t *testing.T) {
 	ws := web.DefaultService()
 
-	postEcho(ws)
+	PostEcho(ws)
 	ts := httptest.NewServer(ws)
 	defer ts.Close()
 
-	r := strings.NewReader(`{ "request": "hello world" `)
+	r := strings.NewReader(`{"request":"hello world"}`)
 	res, err := http.Post(ts.URL+"/echo", "application/json", r)
 	assert.Nil(t, err)
 	assert.Equal(t, 200, res.StatusCode)
