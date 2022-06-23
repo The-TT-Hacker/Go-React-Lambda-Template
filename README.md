@@ -10,6 +10,7 @@ Dependencies:
 - node
 - npm
 - docker
+- terraform
 
 Install code dependencies
 ```
@@ -35,8 +36,8 @@ npm run build
 
 Usage:
 ```
-./bin/server --help
-Usage of ./bin/server:
+./bin/main --help
+Usage of ./bin/main:
   -gendocs
     	Generate API Docs
   -hostdocs
@@ -49,7 +50,7 @@ Usage of ./bin/server:
 
 Run backend http server
 ```
-./bin/server -http
+./bin/main -http
 ```
 
 Run frontend development server
