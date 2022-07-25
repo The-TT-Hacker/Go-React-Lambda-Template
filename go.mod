@@ -4,14 +4,14 @@ go 1.17
 
 require (
 	github.com/aws/aws-lambda-go v1.28.0 // indirect
-	github.com/stretchr/testify v1.7.5
+	github.com/stretchr/testify v1.8.0
 )
 
 require github.com/swaggest/usecase v1.1.3
 
 require (
 	github.com/akrylysov/algnhsa v0.12.1
-	github.com/swaggest/rest v0.2.29
+	github.com/swaggest/rest v0.2.30
 	github.com/swaggest/swgui v1.4.5
 )
 
@@ -20,7 +20,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/net v0.0.0-20211105192438-b53810dc28af // indirect
-	golang.org/x/text v0.3.6 // indirect
+	golang.org/x/text v0.3.7 // indirect
 )
 
 require (
