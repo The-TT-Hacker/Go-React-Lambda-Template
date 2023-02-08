@@ -12,7 +12,7 @@ require github.com/swaggest/usecase v1.1.3
 require (
 	github.com/akrylysov/algnhsa v0.12.1
 	github.com/swaggest/rest v0.2.29
-	github.com/swaggest/swgui v1.4.5
+	github.com/swaggest/swgui v1.6.0
 )
 
 require (
